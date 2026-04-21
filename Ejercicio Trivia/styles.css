@@ -1,0 +1,86 @@
+/* Fondo general */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+#juego {
+    max-width: 500px;
+    margin: 60px auto;
+    background: #2f2f4f;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Pregunta */
+#pregunta {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de botones */
+#opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botones */
+#opciones button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4a69bd;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover */
+#opciones button:hover {
+    background-color: #6a89cc;
+}
+
+/* Botón deshabilitado */
+#opciones button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Temporizador */
+#tiempo {
+    font-weight: bold;
+    font-size: 18px;
+    color: #f6b93b;
+}
+
+/* Colores de respuesta */
+.correcta {
+    background-color: #38ada9 !important;
+}
+
+.incorrecta {
+    background-color: #e55039 !important;
+}
+
+#juego {
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

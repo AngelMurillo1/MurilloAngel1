@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="juego">
+
+        <!-- Selección de categoría -->
+        <div id="pantalla-inicio">
+            <h1>Trivia</h1>
+
+            <select id="categoria">
+                <option value="">Seleccionar categoría</option>
+                <option value="Historia">Historia</option>
+                <option value="Geografía">Geografía</option>
+                <option value="Ciencia">Ciencia</option>
+                <option value="Deportes">Deportes</option>
+                <option value="Tecnología">Tecnología</option>
+                <option value="Matemática">Matemática</option>
+            </select>
+
+            <br><br>
+            <button id="btn-iniciar">Iniciar juego</button>
+        </div>
+
+        <!-- Juego -->
+        <div id="pantalla-juego" style="display:none;">
+            
+            <!-- Progreso -->
+            <p id="progreso">Pregunta 1 de 5</p>
+
+            <!-- Pregunta -->
+            <h2 id="pregunta"></h2>
+
+            <!-- Opciones -->
+            <div id="opciones"></div>
+
+            <!-- Temporizador -->
+            <p>Tiempo: <span id="tiempo">5</span></p>
+
+        </div>
+
+        <!-- Resultado final -->
+        <div id="pantalla-final" style="display:none;">
+            <h2>Resultado</h2>
+
+            <p>Total: 5</p>
+            <p>Correctas: <span id="correctas"></span></p>
+            <p>Incorrectas: <span id="incorrectas"></span></p>
+            <p>No respondidas: <span id="noRespondidas"></span></p>
+
+            <button onclick="location.reload()">Reiniciar</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
